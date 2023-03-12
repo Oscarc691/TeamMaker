@@ -1,5 +1,5 @@
 {
-  "name": "dream-team",
+  "name": "TeamMaker",
   "version": "1.0.0",
   "description": "## Your Task",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rambriz91/dream-team.git"
+    "url": "git+https://github.com/oscarc691/TeamMaker.git"
   },
-  "author": "Rambriz91",
+  "author": "Oscarc691",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rambriz91/dream-team/issues"
+    "url": "https://github.com/oscarc691/TeamMaker/issues"
   },
-  "homepage": "https://github.com/rambriz91/dream-team#readme",
+  "homepage": "https://github.com/oscarc691/TeamMaker#readme",
   "dependencies": {
     "inquirer": "^8.2.4",
     "jest": "^29.5.0"
