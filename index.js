@@ -4,7 +4,7 @@ const Employee = require('./lib/employee');
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
-const teamContainer = document.getElementById('team-container')
+
 
 const teamRoster = [];
 //prompts
@@ -78,13 +78,13 @@ function addManager(data) {
     }
 };
 
-function addEngineer(data) {
+function addEngineer() {
     inquirer
     .prompt([
     {
         type: 'input',
         message: `Please input the employee's github username`,
-        name: `github`,
+        name: 'github',
     },
     {
         type: 'list',
@@ -93,6 +93,10 @@ function addEngineer(data) {
         choices: ['Add New Member', 'Finish Building Team'],
     }, 
     ])
+    .then((data) => {
+        console.log(data)
+        
+})
     const newEngineer = new Engineer(
         data.name,
         data.id,
@@ -140,9 +144,9 @@ function addIntern(data) {
 // create function that writes a div from the newMember array.
 
 function generateTeam() {
-console.log('Yay it works!'),
+console.log('It Works!'),
 console.log(teamRoster)
 }
 
 
-addMember();
+addEngineer();
