@@ -7,7 +7,6 @@ const Intern = require('./lib/intern');
 
 
 const teamRoster = [];
-//prompts
 function addMember() {  
     inquirer
     .prompt ([
@@ -35,20 +34,20 @@ function addMember() {
     ])
     .then((data) => {
         console.log(data)
-        if (data.role === 'manager') {
+        if (data.result === 'manager') {
         addManager(data)
         }
-        else if (data.role === 'engineer') {
+        else if (data.result === 'engineer') {
         addEngineer(data)
         }
-        else if (data.role === 'intern') {
+        else if (data.result === 'intern') {
         addIntern(data)
         }
 })};
 
 // Functions for each team member role
-function addManager(data) {
-    inquirer
+async function addManager(data) {
+    const result = await inquirer
     .prompt([
     {
         type: 'input',
@@ -79,7 +78,7 @@ function addManager(data) {
 };
 
 function addEngineer() {
-    inquirer
+   inquirer
     .prompt([
     {
         type: 'input',
@@ -113,8 +112,8 @@ function addEngineer() {
     }
 };
 
-function addIntern(data) {
-    inquirer
+async function addIntern(data) {
+    const result = awaitinquirer
     .prompt([
     {
         type: 'input',
@@ -149,4 +148,4 @@ console.log(teamRoster)
 }
 
 
-addEngineer();
+addMember();
